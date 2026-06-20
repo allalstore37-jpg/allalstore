@@ -4,115 +4,188 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ALLAL STORE</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#070707;color:white}
-header{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.96)),url("FD584A1E-B81D-45F9-960E-AFB77EAA1885.png");background-size:cover;background-position:center}
-.hero{max-width:900px;background:rgba(0,0,0,.6);padding:35px 25px;border-radius:28px;border:1px solid rgba(255,212,0,.4);box-shadow:0 0 35px rgba(255,212,0,.2)}
-.logo{width:150px;height:150px;object-fit:cover;border-radius:50%;border:3px solid #ffd400;box-shadow:0 0 25px #ffd400;margin-bottom:20px}
-h1{font-size:50px;color:#ffd400;letter-spacing:3px;margin-bottom:15px}
-.intro{font-size:20px;line-height:1.7;color:#eee;margin-bottom:25px}
-.intro span{color:#ffd400;font-weight:bold}
-.badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:25px}
-.badge{border:1px solid #ffd400;color:#ffd400;padding:8px 14px;border-radius:25px;background:rgba(255,212,0,.08)}
-.btn,.order-btn{display:inline-block;text-decoration:none;font-weight:bold;border-radius:30px;transition:.3s}
-.btn{padding:13px 25px;margin:6px}
-.whatsapp{background:#25D366;color:white}
-.snapchat{background:#ffd400;color:black}
-.btn:hover,.order-btn:hover{transform:scale(1.05)}
-section{max-width:1200px;margin:auto;padding:55px 20px}
-.section-title{text-align:center;color:#ffd400;font-size:34px;margin-bottom:35px}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.card{background:#111;border:1px solid #2b2b2b;border-radius:20px;padding:25px;box-shadow:0 0 18px rgba(255,212,0,.1);transition:.3s}
-.card:hover{transform:translateY(-8px);border-color:#ffd400}
-.card h3{color:#ffd400;font-size:25px;margin-bottom:15px}
-.price-list{list-style:none;margin-bottom:20px}
-.price-list li{display:flex;justify-content:space-between;border-bottom:1px solid #2b2b2b;padding:10px 0;color:#ddd}
-.price{color:#ffd400;font-weight:bold}
-.order-btn{background:#ffd400;color:black;padding:12px;width:100%;text-align:center}
-.payments{display:flex;justify-content:center;gap:25px;flex-wrap:wrap}
-.payments img{width:150px;background:white;padding:12px;border-radius:16px}
-.contact{background:#111;border:1px solid #333;border-radius:20px;padding:30px;text-align:center}
-.contact p{font-size:20px;margin:12px}
-.gold{color:#ffd400;font-weight:bold}
-.float-wa{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 0 18px rgba(37,211,102,.5);z-index:99}
-footer{text-align:center;padding:25px;background:#000;color:#999;border-top:1px solid #222}
-@media(max-width:600px){h1{font-size:34px}.logo{width:120px;height:120px}.intro{font-size:17px}}
+body{background:#f4f5f7;color:#111}
+a{text-decoration:none;color:inherit}
+
+.topbar{background:#070707;color:white;padding:10px 6%;display:flex;justify-content:space-between;align-items:center;font-size:14px}
+.topbar span{color:#ffd400;font-weight:bold}
+
+.navbar{background:white;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 3px 15px rgba(0,0,0,.08);position:sticky;top:0;z-index:99}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:55px;height:55px;border-radius:50%;object-fit:cover}
+.brand h2{color:#111}
+.brand h2 span{color:#d6a700}
+.nav-actions a{background:#25D366;color:white;padding:11px 18px;border-radius:30px;font-weight:bold}
+
+.hero{padding:70px 6%;background:linear-gradient(135deg,#080808,#2b2400);color:white;display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.hero h1{font-size:48px;margin-bottom:15px;color:#ffd400}
+.hero p{font-size:19px;line-height:1.7;color:#eee;margin-bottom:25px}
+.hero-buttons a{display:inline-block;margin:6px;padding:13px 22px;border-radius:30px;font-weight:bold}
+.btn-gold{background:#ffd400;color:#111}
+.btn-green{background:#25D366;color:white}
+.hero-card{background:rgba(255,255,255,.08);padding:25px;border-radius:25px;border:1px solid rgba(255,212,0,.35);text-align:center}
+.hero-card img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:3px solid #ffd400;box-shadow:0 0 25px rgba(255,212,0,.7)}
+
+section{padding:55px 6%}
+.title{text-align:center;margin-bottom:35px}
+.title h2{font-size:34px;color:#111}
+.title p{color:#666;margin-top:8px}
+
+.categories,.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.category,.product{background:white;border-radius:20px;padding:22px;box-shadow:0 5px 18px rgba(0,0,0,.08);transition:.3s}
+.category:hover,.product:hover{transform:translateY(-7px);box-shadow:0 10px 25px rgba(0,0,0,.13)}
+.category h3{font-size:22px;margin-bottom:8px}
+.category p{color:#666}
+.product h3{font-size:23px;color:#111;margin-bottom:15px}
+.product .tag{display:inline-block;background:#fff2ad;color:#8a6b00;padding:6px 12px;border-radius:20px;font-size:13px;margin-bottom:15px;font-weight:bold}
+.price-list{list-style:none;margin-bottom:18px}
+.price-list li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #eee;color:#555}
+.price{color:#111;font-weight:bold}
+.product button{width:100%;border:none;background:#111;color:white;padding:13px;border-radius:12px;font-weight:bold;cursor:pointer}
+.product button:hover{background:#d6a700;color:#111}
+
+.payment-box{background:white;border-radius:25px;padding:30px;box-shadow:0 5px 18px rgba(0,0,0,.08);text-align:center}
+.payments{display:flex;justify-content:center;align-items:center;gap:25px;flex-wrap:wrap;margin-top:25px}
+.payments img{width:150px;background:white;padding:12px;border-radius:16px;border:1px solid #eee;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+
+.cart{background:#111;color:white;border-radius:25px;padding:30px}
+.cart h2{color:#ffd400;margin-bottom:20px}
+.cart-item{display:flex;justify-content:space-between;border-bottom:1px solid #333;padding:12px 0}
+.total{font-size:22px;margin-top:20px;color:#ffd400;font-weight:bold}
+.checkout{display:block;text-align:center;background:#25D366;color:white;padding:14px;border-radius:15px;margin-top:20px;font-weight:bold}
+.clear{display:block;text-align:center;background:#444;color:white;padding:12px;border-radius:15px;margin-top:10px;cursor:pointer}
+
+.contact{background:linear-gradient(135deg,#111,#2b2400);color:white;border-radius:25px;padding:35px;text-align:center}
+.contact h2{color:#ffd400;margin-bottom:15px}
+.contact p{margin:10px;font-size:18px}
+
+.float-wa{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;padding:15px 18px;border-radius:50px;font-weight:bold;box-shadow:0 0 20px rgba(37,211,102,.5);z-index:100}
+
+footer{background:#070707;color:#aaa;text-align:center;padding:25px}
+
+@media(max-width:750px){
+.hero{grid-template-columns:1fr;text-align:center}
+.hero h1{font-size:34px}
+.topbar{font-size:12px}
+.navbar{padding:12px 4%}
+.brand h2{font-size:20px}
+}
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="topbar">
+<div>Premium Digital Services</div>
+<div>WhatsApp: <span>+222 32607557</span></div>
+</div>
+
+<div class="navbar">
+<div class="brand">
+<img src="FD584A1E-B81D-45F9-960E-AFB77EAA1885.png" alt="ALLAL STORE">
+<h2>ALLAL <span>STORE</span></h2>
+</div>
+<div class="nav-actions">
+<a href="https://wa.me/22232607557" target="_blank">Order Now</a>
+</div>
+</div>
+
 <div class="hero">
-<img src="FD584A1E-B81D-45F9-960E-AFB77EAA1885.png" class="logo" alt="ALLAL STORE Logo">
-<h1>ALLAL STORE</h1>
-<p class="intro">
-Welcome to <span>ALLAL STORE</span>, your trusted destination for premium digital services.
-Get Netflix, TikTok, Snapchat+, Shahid VIP, OSN+, and PUBG UC with fast delivery,
-secure local payments, and reliable customer support.
+<div>
+<h1>Buy Your Favorite Digital Services in Minutes</h1>
+<p>
+Welcome to ALLAL STORE, your trusted digital shop for Netflix, TikTok, Snapchat+, Shahid VIP, OSN+, and PUBG UC.
+Fast delivery, local payment, clear prices, and direct support on WhatsApp.
 </p>
-<div class="badges">
-<div class="badge">⚡ Fast Delivery</div>
-<div class="badge">🛡 Trusted Service</div>
-<div class="badge">💳 Local Payment</div>
-<div class="badge">🔥 Best Prices</div>
+<div class="hero-buttons">
+<a class="btn-gold" href="#products">View Products</a>
+<a class="btn-green" href="https://wa.me/22232607557" target="_blank">WhatsApp</a>
 </div>
-<a class="btn whatsapp" href="https://wa.me/22232607557" target="_blank">Order on WhatsApp</a>
-<a class="btn snapchat" href="https://www.snapchat.com/add/allal.store" target="_blank">Snapchat</a>
 </div>
-</header>
+
+<div class="hero-card">
+<img src="FD584A1E-B81D-45F9-960E-AFB77EAA1885.png" alt="ALLAL STORE Logo">
+<h2 style="margin-top:15px;color:#ffd400;">Trusted • Fast • Simple</h2>
+</div>
+</div>
 
 <section>
-<h2 class="section-title">Our Products</h2>
+<div class="title">
+<h2>Categories</h2>
+<p>Choose your service and order directly</p>
+</div>
+
+<div class="categories">
+<div class="category"><h3>Netflix</h3><p>Monthly premium accounts</p></div>
+<div class="category"><h3>TikTok</h3><p>Digital TikTok services</p></div>
+<div class="category"><h3>Snapchat+</h3><p>3, 6 and 12 months</p></div>
+<div class="category"><h3>PUBG UC</h3><p>UC packages available</p></div>
+</div>
+</section>
+
+<section id="products">
+<div class="title">
+<h2>Products</h2>
+<p>Click Add to Cart, then send your order on WhatsApp</p>
+</div>
+
 <div class="products">
 
-<div class="card">
+<div class="product">
+<span class="tag">Streaming</span>
 <h3>Netflix</h3>
 <ul class="price-list">
 <li><span>1 Month</span><span class="price">250 MRU</span></li>
 <li><span>2 Months</span><span class="price">500 MRU</span></li>
 <li><span>3 Months</span><span class="price">950 MRU</span></li>
 </ul>
-<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20Netflix" target="_blank">Order Now</a>
+<button onclick="addToCart('Netflix', '1/2/3 Months', '250 - 950 MRU')">Add to Cart</button>
 </div>
 
-<div class="card">
+<div class="product">
+<span class="tag">Social</span>
 <h3>TikTok</h3>
 <ul class="price-list">
 <li><span>Starting Price</span><span class="price">50 MRU</span></li>
 </ul>
-<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20TikTok" target="_blank">Order Now</a>
+<button onclick="addToCart('TikTok', 'Service', 'Starting 50 MRU')">Add to Cart</button>
 </div>
 
-<div class="card">
+<div class="product">
+<span class="tag">Social</span>
 <h3>Snapchat+</h3>
 <ul class="price-list">
 <li><span>3 Months</span><span class="price">190 MRU</span></li>
 <li><span>6 Months</span><span class="price">400 MRU</span></li>
 <li><span>12 Months</span><span class="price">800 MRU</span></li>
 </ul>
-<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20Snapchat%2B" target="_blank">Order Now</a>
+<button onclick="addToCart('Snapchat+', '3/6/12 Months', '190 - 800 MRU')">Add to Cart</button>
 </div>
 
-<div class="card">
+<div class="product">
+<span class="tag">Streaming</span>
 <h3>Shahid VIP</h3>
 <ul class="price-list">
 <li><span>Fenetre</span><span class="price">200 MRU</span></li>
 <li><span>Full Account</span><span class="price">350 MRU</span></li>
 </ul>
-<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20Shahid%20VIP" target="_blank">Order Now</a>
+<button onclick="addToCart('Shahid VIP', 'Fenetre / Full Account', '200 - 350 MRU')">Add to Cart</button>
 </div>
 
-<div class="card">
+<div class="product">
+<span class="tag">Streaming</span>
 <h3>OSN+</h3>
 <ul class="price-list">
 <li><span>1 Month</span><span class="price">450 MRU</span></li>
 </ul>
-<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20OSN%2B" target="_blank">Order Now</a>
+<button onclick="addToCart('OSN+', '1 Month', '450 MRU')">Add to Cart</button>
 </div>
 
-<div class="card">
+<div class="product">
+<span class="tag">Gaming</span>
 <h3>PUBG UC</h3>
 <ul class="price-list">
 <li><span>60 UC</span><span class="price">50 MRU</span></li>
@@ -123,26 +196,44 @@ secure local payments, and reliable customer support.
 <li><span>1080 UC</span><span class="price">800 MRU</span></li>
 <li><span>1800 UC</span><span class="price">1500 MRU</span></li>
 </ul>
-<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20PUBG%20UC" target="_blank">Order Now</a>
+<button onclick="addToCart('PUBG UC', 'UC Package', '50 - 1500 MRU')">Add to Cart</button>
 </div>
 
 </div>
 </section>
 
 <section>
-<h2 class="section-title">Payment Methods</h2>
+<div class="cart">
+<h2>Your Cart</h2>
+<div id="cartItems">
+<p>No items yet.</p>
+</div>
+<div class="total" id="cartTotal">Total: Select prices on WhatsApp</div>
+<a class="checkout" id="checkoutBtn" href="https://wa.me/22232607557" target="_blank">Send Order on WhatsApp</a>
+<div class="clear" onclick="clearCart()">Clear Cart</div>
+</div>
+</section>
+
+<section>
+<div class="payment-box">
+<div class="title">
+<h2>Payment Methods</h2>
+<p>Pay easily using local payment services</p>
+</div>
 <div class="payments">
 <img src="IMG_0940.png" alt="Bankily">
 <img src="IMG_0941.png" alt="Sedad">
 <img src="IMG_0939.png" alt="Masrivi">
 </div>
+</div>
 </section>
 
 <section>
-<h2 class="section-title">Contact Us</h2>
 <div class="contact">
-<p>WhatsApp: <span class="gold">+222 32607557</span></p>
-<p>Snapchat: <span class="gold">allal.store</span></p>
+<h2>Contact Us</h2>
+<p>WhatsApp: +222 32607557</p>
+<p>Snapchat: allal.store</p>
+<a class="btn-gold" style="display:inline-block;margin-top:15px;padding:13px 24px;border-radius:30px;font-weight:bold;" href="https://www.snapchat.com/add/allal.store" target="_blank">Follow Snapchat</a>
 </div>
 </section>
 
@@ -151,6 +242,45 @@ secure local payments, and reliable customer support.
 <footer>
 © 2026 ALLAL STORE. All Rights Reserved.
 </footer>
+
+<script>
+let cart=[];
+
+function addToCart(name,option,price){
+cart.push({name,option,price});
+renderCart();
+}
+
+function renderCart(){
+let cartItems=document.getElementById("cartItems");
+let checkoutBtn=document.getElementById("checkoutBtn");
+
+if(cart.length===0){
+cartItems.innerHTML="<p>No items yet.</p>";
+checkoutBtn.href="https://wa.me/22232607557";
+return;
+}
+
+cartItems.innerHTML="";
+let message="Hello ALLAL STORE, I want to order:%0A";
+
+cart.forEach((item,index)=>{
+cartItems.innerHTML+=`
+<div class="cart-item">
+<span>${index+1}. ${item.name} - ${item.option}</span>
+<span>${item.price}</span>
+</div>`;
+message+=`${index+1}. ${item.name} - ${item.option} - ${item.price}%0A`;
+});
+
+checkoutBtn.href="https://wa.me/22232607557?text="+message;
+}
+
+function clearCart(){
+cart=[];
+renderCart();
+}
+</script>
 
 </body>
 </html>
