@@ -1,260 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALLAL Store</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #070707;
-      color: white;
-    }
-
-    header {
-      min-height: 100vh;
-      background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.9)),
-                  url("FD584A1E-B81D-45F9-960E-AFB77EAA1885.png");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .hero {
-      max-width: 850px;
-    }
-
-    .logo {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid #ffd400;
-      box-shadow: 0 0 30px #ffd400;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: 55px;
-      color: #ffd400;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-    }
-
-    .subtitle {
-      font-size: 20px;
-      color: #ddd;
-      margin-bottom: 30px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: .3s;
-    }
-
-    .whatsapp {
-      background: #25D366;
-      color: white;
-    }
-
-    .snapchat {
-      background: #ffd400;
-      color: black;
-    }
-
-    .buttons a:hover {
-      transform: scale(1.05);
-      opacity: .85;
-    }
-
-    section {
-      padding: 70px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 35px;
-      color: #ffd400;
-      margin-bottom: 40px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 18px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(255, 212, 0, .15);
-      transition: .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: #ffd400;
-    }
-
-    .card h3 {
-      color: #ffd400;
-      margin-bottom: 15px;
-      font-size: 23px;
-    }
-
-    .card p {
-      color: #ccc;
-      line-height: 1.7;
-    }
-
-    .payments {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 35px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    .payments img {
-      width: 150px;
-      background: white;
-      padding: 12px;
-      border-radius: 15px;
-      transition: .3s;
-    }
-
-    .payments img:hover {
-      transform: scale(1.08);
-    }
-
-    .contact-box {
-      background: #111;
-      border-radius: 20px;
-      padding: 35px;
-      text-align: center;
-      border: 1px solid #333;
-    }
-
-    .contact-box p {
-      margin: 15px 0;
-      font-size: 20px;
-    }
-
-    .contact-box span {
-      color: #ffd400;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #000;
-      color: #aaa;
-      border-top: 1px solid #222;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 38px;
-      }
-
-      .subtitle {
-        font-size: 17px;
-      }
-
-      .logo {
-        width: 140px;
-        height: 140px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALLAL STORE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#070707;color:white}
+header{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;background:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.96)),url("FD584A1E-B81D-45F9-960E-AFB77EAA1885.png");background-size:cover;background-position:center}
+.hero{max-width:900px;background:rgba(0,0,0,.6);padding:35px 25px;border-radius:28px;border:1px solid rgba(255,212,0,.4);box-shadow:0 0 35px rgba(255,212,0,.2)}
+.logo{width:150px;height:150px;object-fit:cover;border-radius:50%;border:3px solid #ffd400;box-shadow:0 0 25px #ffd400;margin-bottom:20px}
+h1{font-size:50px;color:#ffd400;letter-spacing:3px;margin-bottom:15px}
+.intro{font-size:20px;line-height:1.7;color:#eee;margin-bottom:25px}
+.intro span{color:#ffd400;font-weight:bold}
+.badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:25px}
+.badge{border:1px solid #ffd400;color:#ffd400;padding:8px 14px;border-radius:25px;background:rgba(255,212,0,.08)}
+.btn,.order-btn{display:inline-block;text-decoration:none;font-weight:bold;border-radius:30px;transition:.3s}
+.btn{padding:13px 25px;margin:6px}
+.whatsapp{background:#25D366;color:white}
+.snapchat{background:#ffd400;color:black}
+.btn:hover,.order-btn:hover{transform:scale(1.05)}
+section{max-width:1200px;margin:auto;padding:55px 20px}
+.section-title{text-align:center;color:#ffd400;font-size:34px;margin-bottom:35px}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:#111;border:1px solid #2b2b2b;border-radius:20px;padding:25px;box-shadow:0 0 18px rgba(255,212,0,.1);transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:#ffd400}
+.card h3{color:#ffd400;font-size:25px;margin-bottom:15px}
+.price-list{list-style:none;margin-bottom:20px}
+.price-list li{display:flex;justify-content:space-between;border-bottom:1px solid #2b2b2b;padding:10px 0;color:#ddd}
+.price{color:#ffd400;font-weight:bold}
+.order-btn{background:#ffd400;color:black;padding:12px;width:100%;text-align:center}
+.payments{display:flex;justify-content:center;gap:25px;flex-wrap:wrap}
+.payments img{width:150px;background:white;padding:12px;border-radius:16px}
+.contact{background:#111;border:1px solid #333;border-radius:20px;padding:30px;text-align:center}
+.contact p{font-size:20px;margin:12px}
+.gold{color:#ffd400;font-weight:bold}
+.float-wa{position:fixed;right:18px;bottom:18px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 0 18px rgba(37,211,102,.5);z-index:99}
+footer{text-align:center;padding:25px;background:#000;color:#999;border-top:1px solid #222}
+@media(max-width:600px){h1{font-size:34px}.logo{width:120px;height:120px}.intro{font-size:17px}}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="hero">
-      <img src="FD584A1E-B81D-45F9-960E-AFB77EAA1885.png" alt="ALLAL Store Logo" class="logo">
+<header>
+<div class="hero">
+<img src="FD584A1E-B81D-45F9-960E-AFB77EAA1885.png" class="logo" alt="ALLAL STORE Logo">
+<h1>ALLAL STORE</h1>
+<p class="intro">
+Welcome to <span>ALLAL STORE</span>, your trusted destination for premium digital services.
+Get Netflix, TikTok, Snapchat+, Shahid VIP, OSN+, and PUBG UC with fast delivery,
+secure local payments, and reliable customer support.
+</p>
+<div class="badges">
+<div class="badge">⚡ Fast Delivery</div>
+<div class="badge">🛡 Trusted Service</div>
+<div class="badge">💳 Local Payment</div>
+<div class="badge">🔥 Best Prices</div>
+</div>
+<a class="btn whatsapp" href="https://wa.me/22232607557" target="_blank">Order on WhatsApp</a>
+<a class="btn snapchat" href="https://www.snapchat.com/add/allal.store" target="_blank">Snapchat</a>
+</div>
+</header>
 
-      <h1>ALLAL STORE</h1>
-      <p class="subtitle">Premium Accounts • Instant Delivery • Trusted Service</p>
+<section>
+<h2 class="section-title">Our Products</h2>
+<div class="products">
 
-      <div class="buttons">
-        <a class="whatsapp" href="https://wa.me/22232607557" target="_blank">Order on WhatsApp</a>
-        <a class="snapchat" href="https://www.snapchat.com/add/allal.store" target="_blank">Snapchat</a>
-      </div>
-    </div>
-  </header>
+<div class="card">
+<h3>Netflix</h3>
+<ul class="price-list">
+<li><span>1 Month</span><span class="price">250 MRU</span></li>
+<li><span>2 Months</span><span class="price">500 MRU</span></li>
+<li><span>3 Months</span><span class="price">950 MRU</span></li>
+</ul>
+<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20Netflix" target="_blank">Order Now</a>
+</div>
 
-  <section>
-    <h2 class="section-title">Our Services</h2>
+<div class="card">
+<h3>TikTok</h3>
+<ul class="price-list">
+<li><span>Starting Price</span><span class="price">50 MRU</span></li>
+</ul>
+<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20TikTok" target="_blank">Order Now</a>
+</div>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Premium Accounts</h3>
-        <p>High quality digital accounts and online services with fast delivery.</p>
-      </div>
+<div class="card">
+<h3>Snapchat+</h3>
+<ul class="price-list">
+<li><span>3 Months</span><span class="price">190 MRU</span></li>
+<li><span>6 Months</span><span class="price">400 MRU</span></li>
+<li><span>12 Months</span><span class="price">800 MRU</span></li>
+</ul>
+<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20Snapchat%2B" target="_blank">Order Now</a>
+</div>
 
-      <div class="card">
-        <h3>Instant Delivery</h3>
-        <p>Send your order on WhatsApp and receive your service quickly.</p>
-      </div>
+<div class="card">
+<h3>Shahid VIP</h3>
+<ul class="price-list">
+<li><span>Fenetre</span><span class="price">200 MRU</span></li>
+<li><span>Full Account</span><span class="price">350 MRU</span></li>
+</ul>
+<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20Shahid%20VIP" target="_blank">Order Now</a>
+</div>
 
-      <div class="card">
-        <h3>Trusted Service</h3>
-        <p>Secure payment methods and friendly support for every customer.</p>
-      </div>
-    </div>
-  </section>
+<div class="card">
+<h3>OSN+</h3>
+<ul class="price-list">
+<li><span>1 Month</span><span class="price">450 MRU</span></li>
+</ul>
+<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20OSN%2B" target="_blank">Order Now</a>
+</div>
 
-  <section>
-    <h2 class="section-title">Payment Methods</h2>
+<div class="card">
+<h3>PUBG UC</h3>
+<ul class="price-list">
+<li><span>60 UC</span><span class="price">50 MRU</span></li>
+<li><span>120 UC</span><span class="price">100 MRU</span></li>
+<li><span>180 UC</span><span class="price">150 MRU</span></li>
+<li><span>360 UC</span><span class="price">250 MRU</span></li>
+<li><span>720 UC</span><span class="price">500 MRU</span></li>
+<li><span>1080 UC</span><span class="price">800 MRU</span></li>
+<li><span>1800 UC</span><span class="price">1500 MRU</span></li>
+</ul>
+<a class="order-btn" href="https://wa.me/22232607557?text=Hello%20ALLAL%20STORE,%20I%20want%20PUBG%20UC" target="_blank">Order Now</a>
+</div>
 
-    <div class="payments">
-      <img src="IMG_0940.png" alt="Bankily">
-      <img src="IMG_0941.png" alt="Sedad">
-      <img src="IMG_0939.png" alt="Masrivi">
-    </div>
-  </section>
+</div>
+</section>
 
-  <section>
-    <h2 class="section-title">Contact Us</h2>
+<section>
+<h2 class="section-title">Payment Methods</h2>
+<div class="payments">
+<img src="IMG_0940.png" alt="Bankily">
+<img src="IMG_0941.png" alt="Sedad">
+<img src="IMG_0939.png" alt="Masrivi">
+</div>
+</section>
 
-    <div class="contact-box">
-      <p>WhatsApp: <span>+222 32607557</span></p>
-      <p>Snapchat: <span>allal.store</span></p>
+<section>
+<h2 class="section-title">Contact Us</h2>
+<div class="contact">
+<p>WhatsApp: <span class="gold">+222 32607557</span></p>
+<p>Snapchat: <span class="gold">allal.store</span></p>
+</div>
+</section>
 
-      <div class="buttons">
-        <a class="whatsapp" href="https://wa.me/22232607557" target="_blank">Chat Now</a>
-      </div>
-    </div>
-  </section>
+<a class="float-wa" href="https://wa.me/22232607557" target="_blank">WhatsApp</a>
 
-  <footer>
-    <p>© 2026 ALLAL Store. All rights reserved.</p>
-  </footer>
+<footer>
+© 2026 ALLAL STORE. All Rights Reserved.
+</footer>
 
 </body>
 </html>
